@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0757d9">
+  <title>Desafio Trigonométrico</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="math-float m1">sin θ</div><div class="math-float m2">π</div><div class="math-float m3">√</div><div class="math-float m4">∠</div>
+  <header class="topbar"><div class="brand"><span class="brand-icon">∠</span> DESAFIO<span>TRIGONOMÉTRICO</span></div><div class="top-pill">⚡ QUIZ DE MATEMÁTICA</div></header>
+  <main class="app">
+    <section id="welcome" class="panel welcome-panel">
+      <div class="eyebrow"><span class="dot"></span> PREPARADO PARA O DESAFIO?</div>
+      <div class="hero-symbol">📐</div><h1>Bem-vindo(a)<br>ao <span>game!</span></h1>
+      <p class="lead">Mostre o que você sabe sobre <b>Trigonometria no Triângulo Retângulo.</b></p>
+      <form id="start-form"><label for="player-name">COMO PODEMOS TE CHAMAR?</label><input id="player-name" maxlength="24" autocomplete="given-name" placeholder="Digite seu nome aqui..." required><button class="primary-btn" type="submit">Começar o desafio <span>→</span></button></form>
+      <div class="welcome-footer"><span>✦ 4 questões</span><span>◷ No seu ritmo</span><span>🏆 Ranking final</span></div>
+    </section>
+    <section id="quiz" class="panel quiz-panel hidden">
+      <div class="quiz-head"><div><div class="eyebrow">JOGADOR(A)</div><div id="player-label" class="player-label"></div></div><div class="question-counter">QUESTÃO <b id="question-number">1</b><span>/ 4</span></div></div>
+      <div class="progress-track"><div id="progress-bar"></div></div>
+      <div class="question-meta"><span id="topic-tag">TRIGONOMETRIA</span><span>+100 PONTOS POR ACERTO</span></div>
+      <h2 id="question-title"></h2>
+      <p id="question-text" class="question-text"></p>
+      <img id="question-image" class="question-image" alt="Figura ilustrativa da questão">
+      <div id="answers" class="answers"></div>
+      <div id="feedback" class="feedback hidden" role="status" aria-live="polite"></div>
+      <button id="check-btn" class="primary-btn" disabled>Confirmar resposta <span>✓</span></button>
+    </section>
+    <section id="result" class="panel result-panel hidden">
+      <div class="result-confetti">✦ ✧ ✦</div><div class="hero-symbol trophy">🏆</div><div class="eyebrow">DESAFIO CONCLUÍDO</div><h1 id="result-title">Mandou bem!</h1><p id="result-message" class="lead"></p>
+      <div class="score-card"><div><span class="score-number" id="score-number">0</span><span class="score-total">/ 4</span><p>respostas corretas</p></div><div class="score-divider"></div><div><span class="score-number" id="score-percent">0%</span><p>de aproveitamento</p></div></div>
+      <div class="result-actions"><button id="ranking-btn" class="primary-btn">Ver ranking <span>🏅</span></button><button id="retry-btn" class="secondary-btn">Jogar novamente ↻</button></div>
+    </section>
+    <section id="ranking" class="panel ranking-panel hidden">
+      <div class="hero-symbol">🏅</div><div class="eyebrow">PLACAR DA TURMA</div><h1>Hall da <span>fama</span></h1><p class="lead">Quem acertou mais, chegou ao topo!</p>
+      <div class="ranking-head"><span>#</span><span>JOGADOR(A)</span><span>ACERTOS</span></div><ol id="ranking-list" class="ranking-list"></ol>
+      <p class="ranking-note">Em caso de empate, os nomes ficam em ordem alfabética.</p>
+      <button id="again-btn" class="primary-btn">Jogar novamente <span>↻</span></button><button id="clear-ranking" class="text-btn">Limpar ranking deste dispositivo</button>
+    </section>
+  </main>
+  <footer>FEITO PARA APRENDER · <span>UM ÂNGULO DE CADA VEZ</span></footer>
+  <script src="script.js"></script>
+</body></html>
